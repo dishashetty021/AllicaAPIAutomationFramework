@@ -1,0 +1,3024 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 14,
+        "name": "Register Users",
+        "description": "",
+        "id": "sanity-tests-including-experience,-system-and-process-api;register-users;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 91553873,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "we have Endpoint https://\u003cexp_ip_port\u003e/api/ab-e-mobile-interface/v1/users",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://\u003cexp_ip_port\u003e/api/ab-e-mobile-interface/v1/users",
+                  "offset": 17
+                }
+              ],
+              "location": "APIStepDefinitions.we_have_endpoint(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 797867883,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "all valid Experience headers",
+            "match": {
+              "arguments": [
+                {
+                  "val": "all",
+                  "offset": 0
+                },
+                {
+                  "val": "Experience",
+                  "offset": 10
+                }
+              ],
+              "location": "APIStepDefinitions.valid_headers(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6834115,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "all valid fields in request body  { \"username\": \"dynamicUsername\"  , \"phoneNo\": \"+919003611976\" , \"email\": \"shiva.palaniappan@allica.co.uk\" , \"password\": \"Allica123$\" }",
+            "match": {
+              "arguments": [
+                {
+                  "val": " { \"username\": \"dynamicUsername\"  , \"phoneNo\": \"+919003611976\" , \"email\": \"shiva.palaniappan@allica.co.uk\" , \"password\": \"Allica123$\" }",
+                  "offset": 33
+                }
+              ],
+              "location": "APIStepDefinitions.fields_in_request_body(String)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 10012684053,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I request for creation of User",
+            "match": {
+              "arguments": [
+                {
+                  "val": "User",
+                  "offset": 26
+                }
+              ],
+              "location": "APIStepDefinitions.request_for_creation_of_details(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 42088841,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the status code is 201",
+            "match": {
+              "arguments": [
+                {
+                  "val": "201",
+                  "offset": 19
+                }
+              ],
+              "location": "APIStepDefinitions.verify_status_code(int)"
+            },
+            "matchedColumns": [
+              4
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 408912555,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "extract sessionId",
+            "match": {
+              "arguments": [
+                {
+                  "val": "sessionId",
+                  "offset": 8
+                }
+              ],
+              "location": "APIStepDefinitions.extract_param(String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 4,
+            "name": "@Positive"
+          },
+          {
+            "line": 4,
+            "name": "@sprint9"
+          },
+          {
+            "line": 4,
+            "name": "@experienceAPI"
+          },
+          {
+            "line": 4,
+            "name": "@L1"
+          },
+          {
+            "line": 4,
+            "name": "@UserScenario"
+          },
+          {
+            "line": 4,
+            "name": "@RegisterUser"
+          }
+        ]
+      },
+      {
+        "line": 26,
+        "name": "Login Ping",
+        "description": "",
+        "id": "sanity-tests-including-experience,-system-and-process-api;login-ping;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1024091,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "we have Endpoint https://\u003cexp_ip_port\u003e/api/ab-e-mobile-interface/v1/users/{username}/login",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://\u003cexp_ip_port\u003e/api/ab-e-mobile-interface/v1/users/{username}/login",
+                  "offset": 17
+                }
+              ],
+              "location": "APIStepDefinitions.we_have_endpoint(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3460013,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "all valid Experience headers",
+            "match": {
+              "arguments": [
+                {
+                  "val": "all",
+                  "offset": 0
+                },
+                {
+                  "val": "Experience",
+                  "offset": 10
+                }
+              ],
+              "location": "APIStepDefinitions.valid_headers(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 8282059,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "a mandatory valid URI param username as APIUSER17",
+            "match": {
+              "arguments": [
+                {
+                  "val": "username",
+                  "offset": 28
+                },
+                {
+                  "val": "APIUSER17",
+                  "offset": 40
+                }
+              ],
+              "location": "APIStepDefinitions.a_mandatory_valid_URI_param(String,String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 502542,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "all valid fields in request body  { \"password\": \"Allica123$\" }",
+            "match": {
+              "arguments": [
+                {
+                  "val": " { \"password\": \"Allica123$\" }",
+                  "offset": 33
+                }
+              ],
+              "location": "APIStepDefinitions.fields_in_request_body(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 356584707,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "I request for creation of User",
+            "match": {
+              "arguments": [
+                {
+                  "val": "User",
+                  "offset": 26
+                }
+              ],
+              "location": "APIStepDefinitions.request_for_creation_of_details(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2613446,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "the status code is 201",
+            "match": {
+              "arguments": [
+                {
+                  "val": "201",
+                  "offset": 19
+                }
+              ],
+              "location": "APIStepDefinitions.verify_status_code(int)"
+            },
+            "matchedColumns": [
+              2
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 16,
+            "name": "@Positive"
+          },
+          {
+            "line": 16,
+            "name": "@sprint9"
+          },
+          {
+            "line": 16,
+            "name": "@experienceAPI"
+          },
+          {
+            "line": 16,
+            "name": "@L1"
+          },
+          {
+            "line": 16,
+            "name": "@UserScenario"
+          },
+          {
+            "line": 16,
+            "name": "@LoginPing"
+          }
+        ]
+      },
+      {
+        "line": 38,
+        "name": "Send OTP",
+        "description": "",
+        "id": "sanity-tests-including-experience,-system-and-process-api;send-otp;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1002803,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "we have Endpoint https://\u003cexp_ip_port\u003e/api/ab-e-mobile-interface/v1/devices/{sessionIdVar}/otp",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://\u003cexp_ip_port\u003e/api/ab-e-mobile-interface/v1/devices/{sessionIdVar}/otp",
+                  "offset": 17
+                }
+              ],
+              "location": "APIStepDefinitions.we_have_endpoint(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1905250,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "all valid Experience headers",
+            "match": {
+              "arguments": [
+                {
+                  "val": "all",
+                  "offset": 0
+                },
+                {
+                  "val": "Experience",
+                  "offset": 10
+                }
+              ],
+              "location": "APIStepDefinitions.valid_headers(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 793728,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "a mandatory valid URI param sessionIdVar as ",
+            "match": {
+              "arguments": [
+                {
+                  "val": "sessionIdVar",
+                  "offset": 28
+                },
+                {
+                  "val": "",
+                  "offset": 44
+                }
+              ],
+              "location": "APIStepDefinitions.a_mandatory_valid_URI_param(String,String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 304110,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "all valid fields in request body  { \"otp\": \"410030\" }",
+            "match": {
+              "arguments": [
+                {
+                  "val": " { \"otp\": \"410030\" }",
+                  "offset": 33
+                }
+              ],
+              "location": "APIStepDefinitions.fields_in_request_body(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 217220920,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "I request for creation of User",
+            "match": {
+              "arguments": [
+                {
+                  "val": "User",
+                  "offset": 26
+                }
+              ],
+              "location": "APIStepDefinitions.request_for_creation_of_details(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 16447035,
+              "error_message": "java.lang.AssertionError: 1 expectation failed.\nExpected status code \u003c201\u003e doesn\u0027t match actual status code \u003c404\u003e.\n\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat java.lang.reflect.Constructor.newInstance(Unknown Source)\r\n\tat org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:83)\r\n\tat org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:77)\r\n\tat org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)\r\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:60)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:235)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:247)\r\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:451)\r\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)\r\n\tat io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:613)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)\r\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:120)\r\n\tat io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)\r\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:128)\r\n\tat io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:117)\r\n\tat com.alica.test.stepdefs.APIStepDefinitions.verify_status_code(APIStepDefinitions.java:56)\r\n\tat ✽.Then the status code is 201(Sanity.feature:35)\r\n",
+              "status": "failed"
+            },
+            "line": 35,
+            "name": "the status code is 201",
+            "match": {
+              "arguments": [
+                {
+                  "val": "201",
+                  "offset": 19
+                }
+              ],
+              "location": "APIStepDefinitions.verify_status_code(int)"
+            },
+            "matchedColumns": [
+              2
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 28,
+            "name": "@Positive"
+          },
+          {
+            "line": 28,
+            "name": "@sprint9"
+          },
+          {
+            "line": 28,
+            "name": "@experienceAPI"
+          },
+          {
+            "line": 28,
+            "name": "@L1"
+          },
+          {
+            "line": 28,
+            "name": "@SendOTP"
+          },
+          {
+            "line": 28,
+            "name": "@UserScenario"
+          }
+        ]
+      },
+      {
+        "line": 49,
+        "name": "This API method is used to retrieve the manager details of a business customer",
+        "description": "",
+        "id": "sanity-tests-including-experience,-system-and-process-api;this-api-method-is-used-to-retrieve-the-manager-details-of-a-business-customer;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1528914,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "we have Endpoint https://\u003cexp_ip_port\u003e/api/ab-e-mobile-interface/v1/customers/{customerID}/managers",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://\u003cexp_ip_port\u003e/api/ab-e-mobile-interface/v1/customers/{customerID}/managers",
+                  "offset": 17
+                }
+              ],
+              "location": "APIStepDefinitions.we_have_endpoint(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3071132,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "all valid Experience headers",
+            "match": {
+              "arguments": [
+                {
+                  "val": "all",
+                  "offset": 0
+                },
+                {
+                  "val": "Experience",
+                  "offset": 10
+                }
+              ],
+              "location": "APIStepDefinitions.valid_headers(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 459966,
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "a mandatory valid URI param customerID as 1003001",
+            "match": {
+              "arguments": [
+                {
+                  "val": "customerID",
+                  "offset": 28
+                },
+                {
+                  "val": "1003001",
+                  "offset": 42
+                }
+              ],
+              "location": "APIStepDefinitions.a_mandatory_valid_URI_param(String,String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 17841039357,
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "I request for retrieval of managerDetails",
+            "match": {
+              "arguments": [
+                {
+                  "val": "managerDetails",
+                  "offset": 27
+                }
+              ],
+              "location": "APIStepDefinitions.request_for_retrieval_of_details(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 7980229,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "the status code is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 19
+                }
+              ],
+              "location": "APIStepDefinitions.verify_status_code(int)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 40,
+            "name": "@Positive"
+          },
+          {
+            "line": 40,
+            "name": "@experienceAPI"
+          },
+          {
+            "line": 40,
+            "name": "@GetKeyManagementDetails"
+          },
+          {
+            "line": 40,
+            "name": "@sprint6"
+          },
+          {
+            "line": 40,
+            "name": "@L1"
+          }
+        ]
+      },
+      {
+        "line": 61,
+        "name": "ValidateIPAddress",
+        "description": "",
+        "id": "sanity-tests-including-experience,-system-and-process-api;validateipaddress;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 4386029,
+              "status": "passed"
+            },
+            "line": 54,
+            "name": "we have Endpoint https://\u003cexp_ip_port\u003e/api/ab-e-mobile-interface/v1/validate/fraud/device",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://\u003cexp_ip_port\u003e/api/ab-e-mobile-interface/v1/validate/fraud/device",
+                  "offset": 17
+                }
+              ],
+              "location": "APIStepDefinitions.we_have_endpoint(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3779329,
+              "status": "passed"
+            },
+            "line": 55,
+            "name": "all valid Experience headers",
+            "match": {
+              "arguments": [
+                {
+                  "val": "all",
+                  "offset": 0
+                },
+                {
+                  "val": "Experience",
+                  "offset": 10
+                }
+              ],
+              "location": "APIStepDefinitions.valid_headers(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 707816,
+              "status": "passed"
+            },
+            "line": 56,
+            "name": "all valid fields in request body  {  \"applicationType\" : \"DEPOSITS\",  \"blackBoxId\" : \"1234\",  \"ipAddress\" : \"81.178.135.98\" }",
+            "match": {
+              "arguments": [
+                {
+                  "val": " {  \"applicationType\" : \"DEPOSITS\",  \"blackBoxId\" : \"1234\",  \"ipAddress\" : \"81.178.135.98\" }",
+                  "offset": 33
+                }
+              ],
+              "location": "APIStepDefinitions.fields_in_request_body(String)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 362555149,
+              "status": "passed"
+            },
+            "line": 57,
+            "name": "I request for creation of ValidateIPAddress",
+            "match": {
+              "arguments": [
+                {
+                  "val": "ValidateIPAddress",
+                  "offset": 26
+                }
+              ],
+              "location": "APIStepDefinitions.request_for_creation_of_details(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5019718,
+              "status": "passed"
+            },
+            "line": 58,
+            "name": "the status code is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 19
+                }
+              ],
+              "location": "APIStepDefinitions.verify_status_code(int)"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 52,
+            "name": "@Positive"
+          },
+          {
+            "line": 52,
+            "name": "@sprint9"
+          },
+          {
+            "line": 52,
+            "name": "@experienceAPI"
+          },
+          {
+            "line": 52,
+            "name": "@L1"
+          },
+          {
+            "line": 52,
+            "name": "@ValidateIPAddress"
+          }
+        ]
+      },
+      {
+        "line": 73,
+        "name": "T\u0026C and FSCS Consent Detail to FMS",
+        "description": "",
+        "id": "sanity-tests-including-experience,-system-and-process-api;t\u0026c-and-fscs-consent-detail-to-fms;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 2329863,
+              "status": "passed"
+            },
+            "line": 65,
+            "name": "we have Endpoint https://\u003cexp_ip_port\u003e/api/ab-e-mobile-interface/v1/applications/{applicationefNo}/consents",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://\u003cexp_ip_port\u003e/api/ab-e-mobile-interface/v1/applications/{applicationefNo}/consents",
+                  "offset": 17
+                }
+              ],
+              "location": "APIStepDefinitions.we_have_endpoint(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3677832,
+              "status": "passed"
+            },
+            "line": 66,
+            "name": "all valid Experience headers",
+            "match": {
+              "arguments": [
+                {
+                  "val": "all",
+                  "offset": 0
+                },
+                {
+                  "val": "Experience",
+                  "offset": 10
+                }
+              ],
+              "location": "APIStepDefinitions.valid_headers(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1108102,
+              "status": "passed"
+            },
+            "line": 67,
+            "name": "a mandatory valid URI param applicationefNo as 00000093000003",
+            "match": {
+              "arguments": [
+                {
+                  "val": "applicationefNo",
+                  "offset": 28
+                },
+                {
+                  "val": "00000093000003",
+                  "offset": 47
+                }
+              ],
+              "location": "APIStepDefinitions.a_mandatory_valid_URI_param(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 420052,
+              "status": "passed"
+            },
+            "line": 68,
+            "name": "all valid fields in request body  { \"applicationType\" : \"DEPOSITS\", \"documentType\" : \"FSCS\", \"documentVersion\" :  \"0.1\"}",
+            "match": {
+              "arguments": [
+                {
+                  "val": " { \"applicationType\" : \"DEPOSITS\", \"documentType\" : \"FSCS\", \"documentVersion\" :  \"0.1\"}",
+                  "offset": 33
+                }
+              ],
+              "location": "APIStepDefinitions.fields_in_request_body(String)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 7400847555,
+              "status": "passed"
+            },
+            "line": 69,
+            "name": "I request for creation of T\u0026C and FSCS Consent Detail to FMS",
+            "match": {
+              "arguments": [
+                {
+                  "val": "T\u0026C and FSCS Consent Detail to FMS",
+                  "offset": 26
+                }
+              ],
+              "location": "APIStepDefinitions.request_for_creation_of_details(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1691993,
+              "status": "passed"
+            },
+            "line": 70,
+            "name": "the status code is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 19
+                }
+              ],
+              "location": "APIStepDefinitions.verify_status_code(int)"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 63,
+            "name": "@Positive"
+          },
+          {
+            "line": 63,
+            "name": "@experienceAPI"
+          },
+          {
+            "line": 63,
+            "name": "@sprint7"
+          },
+          {
+            "line": 63,
+            "name": "@L1"
+          },
+          {
+            "line": 63,
+            "name": "@T\u0026C"
+          }
+        ]
+      },
+      {
+        "line": 85,
+        "name": "This API method is used to retrieve the manager details of a business customer",
+        "description": "",
+        "id": "sanity-tests-including-experience,-system-and-process-api;this-api-method-is-used-to-retrieve-the-manager-details-of-a-business-customer;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3224327,
+              "status": "passed"
+            },
+            "line": 77,
+            "name": "we have Endpoint https://\u003cexp_ip_port\u003e/api/ab-e-mobile-interface/v1/customers/{customerID}/managers",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://\u003cexp_ip_port\u003e/api/ab-e-mobile-interface/v1/customers/{customerID}/managers",
+                  "offset": 17
+                }
+              ],
+              "location": "APIStepDefinitions.we_have_endpoint(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4110048,
+              "status": "passed"
+            },
+            "line": 78,
+            "name": "all valid Experience headers",
+            "match": {
+              "arguments": [
+                {
+                  "val": "all",
+                  "offset": 0
+                },
+                {
+                  "val": "Experience",
+                  "offset": 10
+                }
+              ],
+              "location": "APIStepDefinitions.valid_headers(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 872036,
+              "status": "passed"
+            },
+            "line": 79,
+            "name": "a mandatory valid URI param customerID as 1003001",
+            "match": {
+              "arguments": [
+                {
+                  "val": "customerID",
+                  "offset": 28
+                },
+                {
+                  "val": "1003001",
+                  "offset": 42
+                }
+              ],
+              "location": "APIStepDefinitions.a_mandatory_valid_URI_param(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 13121591,
+              "status": "passed"
+            },
+            "line": 80,
+            "name": "non-mandatory valid query params roles as Director and applyBusinessRules as boolean \u003capplyBusinessRule",
+            "match": {
+              "arguments": [
+                {
+                  "val": "roles",
+                  "offset": 33
+                },
+                {
+                  "val": "Director",
+                  "offset": 42
+                },
+                {
+                  "val": "applyBusinessRules",
+                  "offset": 55
+                },
+                {
+                  "val": "\u003capplyBusinessRule",
+                  "offset": 85
+                }
+              ],
+              "location": "APIStepDefinitions.nonmandatory_valid_query_params_bool(String,String,String,String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2955628432,
+              "status": "passed"
+            },
+            "line": 81,
+            "name": "I request for retrieval of managerDetails",
+            "match": {
+              "arguments": [
+                {
+                  "val": "managerDetails",
+                  "offset": 27
+                }
+              ],
+              "location": "APIStepDefinitions.request_for_retrieval_of_details(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 7416105,
+              "status": "passed"
+            },
+            "line": 82,
+            "name": "the status code is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 19
+                }
+              ],
+              "location": "APIStepDefinitions.verify_status_code(int)"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 75,
+            "name": "@Positive"
+          },
+          {
+            "line": 75,
+            "name": "@sprint9"
+          },
+          {
+            "line": 75,
+            "name": "@experienceAPI"
+          },
+          {
+            "line": 75,
+            "name": "@GetKeyManagementDetails"
+          },
+          {
+            "line": 75,
+            "name": "@L1"
+          }
+        ]
+      },
+      {
+        "line": 99,
+        "name": "Create Time Deposit Application",
+        "description": "",
+        "id": "sanity-tests-including-experience,-system-and-process-api;create-time-deposit-application;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 4065953,
+              "status": "passed"
+            },
+            "line": 91,
+            "name": "we have Endpoint https://\u003cexp_ip_port\u003e/api/ab-e-mobile-interface/v1/deposits/applications",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://\u003cexp_ip_port\u003e/api/ab-e-mobile-interface/v1/deposits/applications",
+                  "offset": 17
+                }
+              ],
+              "location": "APIStepDefinitions.we_have_endpoint(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2378141,
+              "status": "passed"
+            },
+            "line": 92,
+            "name": "all valid Experience headers",
+            "match": {
+              "arguments": [
+                {
+                  "val": "all",
+                  "offset": 0
+                },
+                {
+                  "val": "Experience",
+                  "offset": 10
+                }
+              ],
+              "location": "APIStepDefinitions.valid_headers(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 411309,
+              "status": "passed"
+            },
+            "line": 93,
+            "name": "all valid fields in request body { \"customerId\": \"1003010\" , \"productCode\": \"TD001\" ,\"principalAmount\": 10045 , \"currencyISOCode\": 826 ,\"periodNo\": 3 ,\"periodType\": \"Y\" , \"sourceOfFunds\": {   \"id\": \"12345\" ,  \"description\" : \"description\" }}",
+            "match": {
+              "arguments": [
+                {
+                  "val": "{ \"customerId\": \"1003010\" , \"productCode\": \"TD001\" ,\"principalAmount\": 10045 , \"currencyISOCode\": 826 ,\"periodNo\": 3 ,\"periodType\": \"Y\" , \"sourceOfFunds\": {   \"id\": \"12345\" ,  \"description\" : \"description\" }}",
+                  "offset": 33
+                }
+              ],
+              "location": "APIStepDefinitions.fields_in_request_body(String)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6545262991,
+              "status": "passed"
+            },
+            "line": 94,
+            "name": "I request for creation of Time Deposit Application",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Time Deposit Application",
+                  "offset": 26
+                }
+              ],
+              "location": "APIStepDefinitions.request_for_creation_of_details(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 7381513,
+              "status": "passed"
+            },
+            "line": 95,
+            "name": "the status code is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 19
+                }
+              ],
+              "location": "APIStepDefinitions.verify_status_code(int)"
+            },
+            "matchedColumns": [
+              8
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 30973616,
+              "status": "passed"
+            },
+            "line": 96,
+            "name": "extract applicationRefNo",
+            "match": {
+              "arguments": [
+                {
+                  "val": "applicationRefNo",
+                  "offset": 8
+                }
+              ],
+              "location": "APIStepDefinitions.extract_param(String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 89,
+            "name": "@Positive"
+          },
+          {
+            "line": 89,
+            "name": "@experienceAPI"
+          },
+          {
+            "line": 89,
+            "name": "@sprint7"
+          },
+          {
+            "line": 89,
+            "name": "@L1"
+          },
+          {
+            "line": 89,
+            "name": "@CreateTimeDepositApplication"
+          }
+        ]
+      },
+      {
+        "line": 111,
+        "name": "This API method is used to get the details of a time deposit/savings application from the core banking system based on the application reference number retruned during the creation of a time deposit application",
+        "description": "",
+        "id": "sanity-tests-including-experience,-system-and-process-api;this-api-method-is-used-to-get-the-details-of-a-time-deposit/savings-application-from-the-core-banking-system-based-on-the-application-reference-number-retruned-during-the-creation-of-a-time-deposit-application;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 2207460,
+              "status": "passed"
+            },
+            "line": 104,
+            "name": "we have Endpoint https://\u003cexp_ip_port\u003e/api/ab-e-mobile-interface/v1/deposits/applications/{applicationRefNo}",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://\u003cexp_ip_port\u003e/api/ab-e-mobile-interface/v1/deposits/applications/{applicationRefNo}",
+                  "offset": 17
+                }
+              ],
+              "location": "APIStepDefinitions.we_have_endpoint(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1779044,
+              "status": "passed"
+            },
+            "line": 105,
+            "name": "all valid Experience headers",
+            "match": {
+              "arguments": [
+                {
+                  "val": "all",
+                  "offset": 0
+                },
+                {
+                  "val": "Experience",
+                  "offset": 10
+                }
+              ],
+              "location": "APIStepDefinitions.valid_headers(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 746971,
+              "status": "passed"
+            },
+            "line": 106,
+            "name": "a mandatory valid URI param applicationRefNo as 00001793000003",
+            "match": {
+              "arguments": [
+                {
+                  "val": "applicationRefNo",
+                  "offset": 28
+                },
+                {
+                  "val": "00001793000003",
+                  "offset": 48
+                }
+              ],
+              "location": "APIStepDefinitions.a_mandatory_valid_URI_param(String,String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3025590867,
+              "status": "passed"
+            },
+            "line": 107,
+            "name": "I request for retrieval of TimeDepositApplication",
+            "match": {
+              "arguments": [
+                {
+                  "val": "TimeDepositApplication",
+                  "offset": 27
+                }
+              ],
+              "location": "APIStepDefinitions.request_for_retrieval_of_details(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2317320,
+              "status": "passed"
+            },
+            "line": 108,
+            "name": "the status code is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 19
+                }
+              ],
+              "location": "APIStepDefinitions.verify_status_code(int)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 102,
+            "name": "@GetTimeDepositApplication"
+          },
+          {
+            "line": 102,
+            "name": "@Positive"
+          },
+          {
+            "line": 102,
+            "name": "@experienceAPI"
+          },
+          {
+            "line": 102,
+            "name": "@sprint6"
+          },
+          {
+            "line": 102,
+            "name": "@L1"
+          }
+        ]
+      },
+      {
+        "line": 122,
+        "name": "This API method is used to retrieve the nominated account details of a time deposit/savings application from the core banking system based on",
+        "description": "",
+        "id": "sanity-tests-including-experience,-system-and-process-api;this-api-method-is-used-to-retrieve-the-nominated-account-details-of-a-time-deposit/savings-application-from-the-core-banking-system-based-on;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 2216583,
+              "status": "passed"
+            },
+            "line": 115,
+            "name": "we have Endpoint https://\u003cexp_ip_port\u003e/api/ab-e-mobile-interface/v1/deposits/applications/{applicationRefNo}/accounts/{accountId}",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://\u003cexp_ip_port\u003e/api/ab-e-mobile-interface/v1/deposits/applications/{applicationRefNo}/accounts/{accountId}",
+                  "offset": 17
+                }
+              ],
+              "location": "APIStepDefinitions.we_have_endpoint(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5061913,
+              "status": "passed"
+            },
+            "line": 116,
+            "name": "all valid Experience headers",
+            "match": {
+              "arguments": [
+                {
+                  "val": "all",
+                  "offset": 0
+                },
+                {
+                  "val": "Experience",
+                  "offset": 10
+                }
+              ],
+              "location": "APIStepDefinitions.valid_headers(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1837585,
+              "status": "passed"
+            },
+            "line": 117,
+            "name": "mandatory valid URI params applicationRefNo as 00001793000003 and accountId as 97537626",
+            "match": {
+              "arguments": [
+                {
+                  "val": "applicationRefNo",
+                  "offset": 27
+                },
+                {
+                  "val": "00001793000003",
+                  "offset": 47
+                },
+                {
+                  "val": "accountId",
+                  "offset": 66
+                },
+                {
+                  "val": "97537626",
+                  "offset": 79
+                }
+              ],
+              "location": "APIStepDefinitions.mandatory_valid_URI_params(String,String,String,String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3041127853,
+              "status": "passed"
+            },
+            "line": 118,
+            "name": "I request for retrieval of TimeDepositAccountDetails",
+            "match": {
+              "arguments": [
+                {
+                  "val": "TimeDepositAccountDetails",
+                  "offset": 27
+                }
+              ],
+              "location": "APIStepDefinitions.request_for_retrieval_of_details(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3432263,
+              "error_message": "java.lang.AssertionError: 1 expectation failed.\nExpected status code \u003c200\u003e doesn\u0027t match actual status code \u003c404\u003e.\n\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat java.lang.reflect.Constructor.newInstance(Unknown Source)\r\n\tat org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:83)\r\n\tat org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:77)\r\n\tat org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:247)\r\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:451)\r\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)\r\n\tat io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:613)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)\r\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:120)\r\n\tat io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)\r\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:128)\r\n\tat io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:117)\r\n\tat com.alica.test.stepdefs.APIStepDefinitions.verify_status_code(APIStepDefinitions.java:56)\r\n\tat ✽.Then the status code is 200(Sanity.feature:119)\r\n",
+              "status": "failed"
+            },
+            "line": 119,
+            "name": "the status code is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 19
+                }
+              ],
+              "location": "APIStepDefinitions.verify_status_code(int)"
+            },
+            "matchedColumns": [
+              2
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 113,
+            "name": "@sprint8"
+          },
+          {
+            "line": 113,
+            "name": "@Positive"
+          },
+          {
+            "line": 113,
+            "name": "@experienceAPI"
+          },
+          {
+            "line": 113,
+            "name": "@L1"
+          },
+          {
+            "line": 113,
+            "name": "@GetTimeDepositAccountDetails"
+          }
+        ]
+      },
+      {
+        "line": 133,
+        "name": "To get countries configured in core banking system",
+        "description": "",
+        "id": "sanity-tests-including-experience,-system-and-process-api;to-get-countries-configured-in-core-banking-system;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3346732,
+              "status": "passed"
+            },
+            "line": 126,
+            "name": "we have Endpoint https://\u003cexp_ip_port\u003e/api/ab-e-mobile-interface/v1/countries",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://\u003cexp_ip_port\u003e/api/ab-e-mobile-interface/v1/countries",
+                  "offset": 17
+                }
+              ],
+              "location": "APIStepDefinitions.we_have_endpoint(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5711568,
+              "status": "passed"
+            },
+            "line": 127,
+            "name": "4 valid Experience headers",
+            "match": {
+              "arguments": [
+                {
+                  "val": "4",
+                  "offset": 0
+                },
+                {
+                  "val": "Experience",
+                  "offset": 8
+                }
+              ],
+              "location": "APIStepDefinitions.valid_headers(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 415490,
+              "status": "passed"
+            },
+            "line": 128,
+            "name": "a mandatory valid query param language as En",
+            "match": {
+              "arguments": [
+                {
+                  "val": "language",
+                  "offset": 30
+                },
+                {
+                  "val": "En",
+                  "offset": 42
+                }
+              ],
+              "location": "APIStepDefinitions.a_mandatory_valid_query_param(String,String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2855250423,
+              "status": "passed"
+            },
+            "line": 129,
+            "name": "I request for retrieval of Countryist",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Countryist",
+                  "offset": 27
+                }
+              ],
+              "location": "APIStepDefinitions.request_for_retrieval_of_details(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 49464652,
+              "status": "passed"
+            },
+            "line": 130,
+            "name": "the status code is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 19
+                }
+              ],
+              "location": "APIStepDefinitions.verify_status_code(int)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 124,
+            "name": "@Positive"
+          },
+          {
+            "line": 124,
+            "name": "@experienceAPI"
+          },
+          {
+            "line": 124,
+            "name": "@L1"
+          },
+          {
+            "line": 124,
+            "name": "@sprint1"
+          },
+          {
+            "line": 124,
+            "name": "@GetCountryList"
+          }
+        ]
+      },
+      {
+        "line": 148,
+        "name": "I want to validate CompanyName",
+        "description": "",
+        "id": "sanity-tests-including-experience,-system-and-process-api;i-want-to-validate-companyname;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 2065668,
+              "status": "passed"
+            },
+            "line": 137,
+            "name": "we have Endpoint https://\u003cexp_ip_port\u003e/api/ab-e-mobile-interface/v1/companies",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://\u003cexp_ip_port\u003e/api/ab-e-mobile-interface/v1/companies",
+                  "offset": 17
+                }
+              ],
+              "location": "APIStepDefinitions.we_have_endpoint(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1135471,
+              "status": "passed"
+            },
+            "line": 138,
+            "name": "4 valid Experience headers",
+            "match": {
+              "arguments": [
+                {
+                  "val": "4",
+                  "offset": 0
+                },
+                {
+                  "val": "Experience",
+                  "offset": 8
+                }
+              ],
+              "location": "APIStepDefinitions.valid_headers(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 187028,
+              "status": "passed"
+            },
+            "line": 139,
+            "name": "a mandatory valid query param companyName as ALLICA",
+            "match": {
+              "arguments": [
+                {
+                  "val": "companyName",
+                  "offset": 30
+                },
+                {
+                  "val": "ALLICA",
+                  "offset": 45
+                }
+              ],
+              "location": "APIStepDefinitions.a_mandatory_valid_query_param(String,String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 877688429,
+              "status": "passed"
+            },
+            "line": 140,
+            "name": "I request for retrieval of companyDetails",
+            "match": {
+              "arguments": [
+                {
+                  "val": "companyDetails",
+                  "offset": 27
+                }
+              ],
+              "location": "APIStepDefinitions.request_for_retrieval_of_details(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1796151,
+              "status": "passed"
+            },
+            "line": 141,
+            "name": "the status code is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 19
+                }
+              ],
+              "location": "APIStepDefinitions.verify_status_code(int)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 131704393,
+              "status": "passed"
+            },
+            "line": 142,
+            "name": "response includes the following",
+            "match": {
+              "location": "APIStepDefinitions.response_equals(String,String\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "companyName",
+                  "ALLICA LIMITED"
+                ],
+                "line": 143
+              },
+              {
+                "cells": [
+                  "companyID",
+                  "217364896"
+                ],
+                "line": 144
+              },
+              {
+                "cells": [
+                  "registrationNumber",
+                  "07706156"
+                ],
+                "line": 145
+              }
+            ],
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 135,
+            "name": "@Positive"
+          },
+          {
+            "line": 135,
+            "name": "@experienceAPI"
+          },
+          {
+            "line": 135,
+            "name": "@L1"
+          },
+          {
+            "line": 135,
+            "name": "@sprint1"
+          },
+          {
+            "line": 135,
+            "name": "@D\u0026B"
+          }
+        ]
+      },
+      {
+        "line": 160,
+        "name": "This API method is used to create list of tax information of a customer into the core banking system",
+        "description": "",
+        "id": "sanity-tests-including-experience,-system-and-process-api;this-api-method-is-used-to-create-list-of-tax-information-of-a-customer-into-the-core-banking-system;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1958850,
+              "status": "passed"
+            },
+            "line": 152,
+            "name": "we have Endpoint https://\u003cexp_ip_port\u003e/api/ab-e-mobile-interface/v1/customers/{customerId}/taxInfo",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://\u003cexp_ip_port\u003e/api/ab-e-mobile-interface/v1/customers/{customerId}/taxInfo",
+                  "offset": 17
+                }
+              ],
+              "location": "APIStepDefinitions.we_have_endpoint(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1497362,
+              "status": "passed"
+            },
+            "line": 153,
+            "name": "all valid Experience headers",
+            "match": {
+              "arguments": [
+                {
+                  "val": "all",
+                  "offset": 0
+                },
+                {
+                  "val": "Experience",
+                  "offset": 10
+                }
+              ],
+              "location": "APIStepDefinitions.valid_headers(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 413590,
+              "status": "passed"
+            },
+            "line": 154,
+            "name": "a mandatory valid URI param customerId as 1003009",
+            "match": {
+              "arguments": [
+                {
+                  "val": "customerId",
+                  "offset": 28
+                },
+                {
+                  "val": "1003009",
+                  "offset": 42
+                }
+              ],
+              "location": "APIStepDefinitions.a_mandatory_valid_URI_param(String,String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 328819,
+              "status": "passed"
+            },
+            "line": 155,
+            "name": "all valid fields in request body [  { \"nationalInsuranceNo\": \"QQ1206C\", \"countryISOCode\": 826 , \"taxReferenceNo\": \"11191314\"  }    ]",
+            "match": {
+              "arguments": [
+                {
+                  "val": "[  { \"nationalInsuranceNo\": \"QQ1206C\", \"countryISOCode\": 826 , \"taxReferenceNo\": \"11191314\"  }    ]",
+                  "offset": 33
+                }
+              ],
+              "location": "APIStepDefinitions.fields_in_request_body(String)"
+            },
+            "matchedColumns": [
+              1,
+              2,
+              3
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3277949431,
+              "status": "passed"
+            },
+            "line": 156,
+            "name": "I request for creation of TaxInfoToFMS",
+            "match": {
+              "arguments": [
+                {
+                  "val": "TaxInfoToFMS",
+                  "offset": 26
+                }
+              ],
+              "location": "APIStepDefinitions.request_for_creation_of_details(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 4539984,
+              "error_message": "java.lang.AssertionError: 1 expectation failed.\nExpected status code \u003c200\u003e doesn\u0027t match actual status code \u003c500\u003e.\n\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat java.lang.reflect.Constructor.newInstance(Unknown Source)\r\n\tat org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:83)\r\n\tat org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:77)\r\n\tat org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:247)\r\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:451)\r\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)\r\n\tat io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:613)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)\r\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:120)\r\n\tat io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)\r\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:128)\r\n\tat io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:117)\r\n\tat com.alica.test.stepdefs.APIStepDefinitions.verify_status_code(APIStepDefinitions.java:56)\r\n\tat ✽.Then the status code is 200(Sanity.feature:157)\r\n",
+              "status": "failed"
+            },
+            "line": 157,
+            "name": "the status code is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 19
+                }
+              ],
+              "location": "APIStepDefinitions.verify_status_code(int)"
+            },
+            "matchedColumns": [
+              4
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 150,
+            "name": "@Positive"
+          },
+          {
+            "line": 150,
+            "name": "@sprint9"
+          },
+          {
+            "line": 150,
+            "name": "@experienceAPI"
+          },
+          {
+            "line": 150,
+            "name": "@L1"
+          },
+          {
+            "line": 150,
+            "name": "@SaveTaxInfoToFMS"
+          }
+        ]
+      },
+      {
+        "line": 183,
+        "name": "This API method is used to retrieve the manager details of a business customer",
+        "description": "",
+        "id": "sanity-tests-including-experience,-system-and-process-api;this-api-method-is-used-to-retrieve-the-manager-details-of-a-business-customer;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 299549,
+              "status": "passed"
+            },
+            "line": 175,
+            "name": "we have Endpoint https://192.168.35.70:8083/api/ab-s-customers-api/v1/customers/{customerID}/managers",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://192.168.35.70:8083/api/ab-s-customers-api/v1/customers/{customerID}/managers",
+                  "offset": 17
+                }
+              ],
+              "location": "APIStepDefinitions.we_have_endpoint(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2205178,
+              "status": "passed"
+            },
+            "line": 176,
+            "name": "all valid System headers",
+            "match": {
+              "arguments": [
+                {
+                  "val": "all",
+                  "offset": 0
+                },
+                {
+                  "val": "System",
+                  "offset": 10
+                }
+              ],
+              "location": "APIStepDefinitions.valid_headers(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 803231,
+              "status": "passed"
+            },
+            "line": 177,
+            "name": "a mandatory valid URI param customerID as 1003001",
+            "match": {
+              "arguments": [
+                {
+                  "val": "customerID",
+                  "offset": 28
+                },
+                {
+                  "val": "1003001",
+                  "offset": 42
+                }
+              ],
+              "location": "APIStepDefinitions.a_mandatory_valid_URI_param(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 807412,
+              "status": "passed"
+            },
+            "line": 178,
+            "name": "non-mandatory valid query params roles as Director and applyBusinessRules as boolean false",
+            "match": {
+              "arguments": [
+                {
+                  "val": "roles",
+                  "offset": 33
+                },
+                {
+                  "val": "Director",
+                  "offset": 42
+                },
+                {
+                  "val": "applyBusinessRules",
+                  "offset": 55
+                },
+                {
+                  "val": "false",
+                  "offset": 85
+                }
+              ],
+              "location": "APIStepDefinitions.nonmandatory_valid_query_params_bool(String,String,String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 21026660954,
+              "error_message": "java.net.ConnectException: Connection timed out: connect\r\n\tat java.net.DualStackPlainSocketImpl.connect0(Native Method)\r\n\tat java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)\r\n\tat java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)\r\n\tat java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)\r\n\tat java.net.AbstractPlainSocketImpl.connect(Unknown Source)\r\n\tat java.net.PlainSocketImpl.connect(Unknown Source)\r\n\tat java.net.SocksSocketImpl.connect(Unknown Source)\r\n\tat java.net.Socket.connect(Unknown Source)\r\n\tat sun.security.ssl.SSLSocketImpl.connect(Unknown Source)\r\n\tat org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:542)\r\n\tat org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:412)\r\n\tat org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:179)\r\n\tat org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:328)\r\n\tat org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:612)\r\n\tat org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:447)\r\n\tat org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:884)\r\n\tat org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)\r\n\tat org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)\r\n\tat org.apache.http.client.HttpClient$execute$0.call(Unknown Source)\r\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)\r\n\tat org.apache.http.client.HttpClient$execute$0.call(Unknown Source)\r\n\tat io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder.doRequest(RequestSpecificationImpl.groovy:2028)\r\n\tat io.restassured.internal.http.HTTPBuilder.doRequest(HTTPBuilder.java:494)\r\n\tat io.restassured.internal.http.HTTPBuilder.request(HTTPBuilder.java:451)\r\n\tat io.restassured.internal.http.HTTPBuilder$request$3.call(Unknown Source)\r\n\tat io.restassured.internal.RequestSpecificationImpl.sendHttpRequest(RequestSpecificationImpl.groovy:1434)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1212)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1021)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:812)\r\n\tat io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:48)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:58)\r\n\tat io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1221)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1212)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1021)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:812)\r\n\tat io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:48)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:149)\r\n\tat io.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:30)\r\n\tat io.restassured.filter.Filter$filter$0.call(Unknown Source)\r\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)\r\n\tat io.restassured.filter.Filter$filter.call(Unknown Source)\r\n\tat io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)\r\n\tat io.restassured.filter.time.TimingFilter.filter(TimingFilter.java:56)\r\n\tat io.restassured.filter.Filter$filter.call(Unknown Source)\r\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)\r\n\tat io.restassured.filter.Filter$filter.call(Unknown Source)\r\n\tat io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)\r\n\tat io.restassured.filter.log.RequestLoggingFilter.filter(RequestLoggingFilter.java:124)\r\n\tat io.restassured.filter.Filter$filter.call(Unknown Source)\r\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)\r\n\tat io.restassured.filter.Filter$filter$0.call(Unknown Source)\r\n\tat io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)\r\n\tat io.restassured.filter.FilterContext$next.call(Unknown Source)\r\n\tat io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1631)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1212)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1021)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:812)\r\n\tat io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:48)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:58)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:182)\r\n\tat io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1637)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1212)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1021)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:812)\r\n\tat io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:48)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:58)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:182)\r\n\tat io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy:166)\r\n\tat io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy)\r\n\tat com.alica.test.stepdefs.APIStepDefinitions.request_for_retrieval_of_details(APIStepDefinitions.java:104)\r\n\tat ✽.When I request for retrieval of managerDetails(Sanity.feature:179)\r\n",
+              "status": "failed"
+            },
+            "line": 179,
+            "name": "I request for retrieval of managerDetails",
+            "match": {
+              "arguments": [
+                {
+                  "val": "managerDetails",
+                  "offset": 27
+                }
+              ],
+              "location": "APIStepDefinitions.request_for_retrieval_of_details(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 180,
+            "name": "the status code is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 19
+                }
+              ],
+              "location": "APIStepDefinitions.verify_status_code(int)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 173,
+            "name": "@Positive"
+          },
+          {
+            "line": 173,
+            "name": "@sprint9"
+          },
+          {
+            "line": 173,
+            "name": "@GetKeyManagementDetails"
+          },
+          {
+            "line": 173,
+            "name": "@systemAPI"
+          },
+          {
+            "line": 173,
+            "name": "@L1"
+          }
+        ]
+      },
+      {
+        "line": 194,
+        "name": "This API method is used to retrieve the Time Deposit/Savings product details based on a productCode and currency ISO Code",
+        "description": "",
+        "id": "sanity-tests-including-experience,-system-and-process-api;this-api-method-is-used-to-retrieve-the-time-deposit/savings-product-details-based-on-a-productcode-and-currency-iso-code;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 348586,
+              "status": "passed"
+            },
+            "line": 187,
+            "name": "we have Endpoint https://192.168.35.70:8083/api/ab-s-deposits-api/v1/deposits/products/{productCode}/{currencyISOCode}",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://192.168.35.70:8083/api/ab-s-deposits-api/v1/deposits/products/{productCode}/{currencyISOCode}",
+                  "offset": 17
+                }
+              ],
+              "location": "APIStepDefinitions.we_have_endpoint(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 8265713,
+              "status": "passed"
+            },
+            "line": 188,
+            "name": "all valid System headers",
+            "match": {
+              "arguments": [
+                {
+                  "val": "all",
+                  "offset": 0
+                },
+                {
+                  "val": "System",
+                  "offset": 10
+                }
+              ],
+              "location": "APIStepDefinitions.valid_headers(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1741791,
+              "status": "passed"
+            },
+            "line": 189,
+            "name": "mandatory valid URI params productCode as TD001 and currencyISOCode as 826",
+            "match": {
+              "arguments": [
+                {
+                  "val": "productCode",
+                  "offset": 27
+                },
+                {
+                  "val": "TD001",
+                  "offset": 42
+                },
+                {
+                  "val": "currencyISOCode",
+                  "offset": 52
+                },
+                {
+                  "val": "826",
+                  "offset": 71
+                }
+              ],
+              "location": "APIStepDefinitions.mandatory_valid_URI_params(String,String,String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 21024038004,
+              "error_message": "java.net.ConnectException: Connection timed out: connect\r\n\tat java.net.DualStackPlainSocketImpl.connect0(Native Method)\r\n\tat java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)\r\n\tat java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)\r\n\tat java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)\r\n\tat java.net.AbstractPlainSocketImpl.connect(Unknown Source)\r\n\tat java.net.PlainSocketImpl.connect(Unknown Source)\r\n\tat java.net.SocksSocketImpl.connect(Unknown Source)\r\n\tat java.net.Socket.connect(Unknown Source)\r\n\tat sun.security.ssl.SSLSocketImpl.connect(Unknown Source)\r\n\tat org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:542)\r\n\tat org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:412)\r\n\tat org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:179)\r\n\tat org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:328)\r\n\tat org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:612)\r\n\tat org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:447)\r\n\tat org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:884)\r\n\tat org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)\r\n\tat org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)\r\n\tat org.apache.http.client.HttpClient$execute$0.call(Unknown Source)\r\n\tat io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder.doRequest(RequestSpecificationImpl.groovy:2028)\r\n\tat io.restassured.internal.http.HTTPBuilder.doRequest(HTTPBuilder.java:494)\r\n\tat io.restassured.internal.http.HTTPBuilder.request(HTTPBuilder.java:451)\r\n\tat io.restassured.internal.http.HTTPBuilder$request$3.call(Unknown Source)\r\n\tat io.restassured.internal.RequestSpecificationImpl.sendHttpRequest(RequestSpecificationImpl.groovy:1434)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1212)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1021)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:812)\r\n\tat io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:48)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:58)\r\n\tat io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1221)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1212)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1021)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:812)\r\n\tat io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:48)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:149)\r\n\tat io.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:30)\r\n\tat io.restassured.filter.Filter$filter$0.call(Unknown Source)\r\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)\r\n\tat io.restassured.filter.Filter$filter.call(Unknown Source)\r\n\tat io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)\r\n\tat io.restassured.filter.time.TimingFilter.filter(TimingFilter.java:56)\r\n\tat io.restassured.filter.Filter$filter.call(Unknown Source)\r\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)\r\n\tat io.restassured.filter.Filter$filter.call(Unknown Source)\r\n\tat io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)\r\n\tat io.restassured.filter.log.RequestLoggingFilter.filter(RequestLoggingFilter.java:124)\r\n\tat io.restassured.filter.Filter$filter.call(Unknown Source)\r\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)\r\n\tat io.restassured.filter.Filter$filter$0.call(Unknown Source)\r\n\tat io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)\r\n\tat io.restassured.filter.FilterContext$next.call(Unknown Source)\r\n\tat io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1631)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1212)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1021)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:812)\r\n\tat io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:48)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:58)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:182)\r\n\tat io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1637)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1212)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1021)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:812)\r\n\tat io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:48)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:58)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:182)\r\n\tat io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy:166)\r\n\tat io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy)\r\n\tat com.alica.test.stepdefs.APIStepDefinitions.request_for_retrieval_of_details(APIStepDefinitions.java:104)\r\n\tat ✽.When I request for retrieval of TimeDepositProductsInfo(Sanity.feature:190)\r\n",
+              "status": "failed"
+            },
+            "line": 190,
+            "name": "I request for retrieval of TimeDepositProductsInfo",
+            "match": {
+              "arguments": [
+                {
+                  "val": "TimeDepositProductsInfo",
+                  "offset": 27
+                }
+              ],
+              "location": "APIStepDefinitions.request_for_retrieval_of_details(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 191,
+            "name": "the status code is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 19
+                }
+              ],
+              "location": "APIStepDefinitions.verify_status_code(int)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 185,
+            "name": "@Positive"
+          },
+          {
+            "line": 185,
+            "name": "@sprint6"
+          },
+          {
+            "line": 185,
+            "name": "@systemAPI"
+          },
+          {
+            "line": 185,
+            "name": "@GetTimeDepositProductsInfo"
+          },
+          {
+            "line": 185,
+            "name": "@L1"
+          }
+        ]
+      },
+      {
+        "line": 206,
+        "name": "This API method is used to get the details of a time deposit/savings application from the core banking system based on the application reference number retruned during the creation of a time deposit application",
+        "description": "",
+        "id": "sanity-tests-including-experience,-system-and-process-api;this-api-method-is-used-to-get-the-details-of-a-time-deposit/savings-application-from-the-core-banking-system-based-on-the-application-reference-number-retruned-during-the-creation-of-a-time-deposit-application;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 2212781,
+              "status": "passed"
+            },
+            "line": 199,
+            "name": "we have Endpoint https://192.168.35.70:8083/api/ab-s-deposits-api/v1/deposits/applications/{applicationRefNo}",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://192.168.35.70:8083/api/ab-s-deposits-api/v1/deposits/applications/{applicationRefNo}",
+                  "offset": 17
+                }
+              ],
+              "location": "APIStepDefinitions.we_have_endpoint(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 12310378,
+              "status": "passed"
+            },
+            "line": 200,
+            "name": "all valid System headers",
+            "match": {
+              "arguments": [
+                {
+                  "val": "all",
+                  "offset": 0
+                },
+                {
+                  "val": "System",
+                  "offset": 10
+                }
+              ],
+              "location": "APIStepDefinitions.valid_headers(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 814255,
+              "status": "passed"
+            },
+            "line": 201,
+            "name": "a mandatory valid URI param applicationRefNo as 00001793000003",
+            "match": {
+              "arguments": [
+                {
+                  "val": "applicationRefNo",
+                  "offset": 28
+                },
+                {
+                  "val": "00001793000003",
+                  "offset": 48
+                }
+              ],
+              "location": "APIStepDefinitions.a_mandatory_valid_URI_param(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 21044596990,
+              "error_message": "java.net.ConnectException: Connection timed out: connect\r\n\tat java.net.DualStackPlainSocketImpl.connect0(Native Method)\r\n\tat java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)\r\n\tat java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)\r\n\tat java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)\r\n\tat java.net.AbstractPlainSocketImpl.connect(Unknown Source)\r\n\tat java.net.PlainSocketImpl.connect(Unknown Source)\r\n\tat java.net.SocksSocketImpl.connect(Unknown Source)\r\n\tat java.net.Socket.connect(Unknown Source)\r\n\tat sun.security.ssl.SSLSocketImpl.connect(Unknown Source)\r\n\tat org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:542)\r\n\tat org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:412)\r\n\tat org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:179)\r\n\tat org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:328)\r\n\tat org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:612)\r\n\tat org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:447)\r\n\tat org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:884)\r\n\tat org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)\r\n\tat org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)\r\n\tat org.apache.http.client.HttpClient$execute$0.call(Unknown Source)\r\n\tat io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder.doRequest(RequestSpecificationImpl.groovy:2028)\r\n\tat io.restassured.internal.http.HTTPBuilder.doRequest(HTTPBuilder.java:494)\r\n\tat io.restassured.internal.http.HTTPBuilder.request(HTTPBuilder.java:451)\r\n\tat io.restassured.internal.http.HTTPBuilder$request$3.call(Unknown Source)\r\n\tat io.restassured.internal.RequestSpecificationImpl.sendHttpRequest(RequestSpecificationImpl.groovy:1434)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1212)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1021)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:812)\r\n\tat io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:48)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:58)\r\n\tat io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1221)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1212)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1021)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:812)\r\n\tat io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:48)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:149)\r\n\tat io.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:30)\r\n\tat io.restassured.filter.Filter$filter$0.call(Unknown Source)\r\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)\r\n\tat io.restassured.filter.Filter$filter.call(Unknown Source)\r\n\tat io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)\r\n\tat io.restassured.filter.time.TimingFilter.filter(TimingFilter.java:56)\r\n\tat io.restassured.filter.Filter$filter.call(Unknown Source)\r\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)\r\n\tat io.restassured.filter.Filter$filter.call(Unknown Source)\r\n\tat io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)\r\n\tat io.restassured.filter.log.RequestLoggingFilter.filter(RequestLoggingFilter.java:124)\r\n\tat io.restassured.filter.Filter$filter.call(Unknown Source)\r\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)\r\n\tat io.restassured.filter.Filter$filter$0.call(Unknown Source)\r\n\tat io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)\r\n\tat io.restassured.filter.FilterContext$next.call(Unknown Source)\r\n\tat io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1631)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1212)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1021)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:812)\r\n\tat io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:48)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:58)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:182)\r\n\tat io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1637)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1212)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1021)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:812)\r\n\tat io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:48)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:58)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:182)\r\n\tat io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy:166)\r\n\tat io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy)\r\n\tat com.alica.test.stepdefs.APIStepDefinitions.request_for_retrieval_of_details(APIStepDefinitions.java:104)\r\n\tat ✽.When I request for retrieval of TimeDepositApplication(Sanity.feature:202)\r\n",
+              "status": "failed"
+            },
+            "line": 202,
+            "name": "I request for retrieval of TimeDepositApplication",
+            "match": {
+              "arguments": [
+                {
+                  "val": "TimeDepositApplication",
+                  "offset": 27
+                }
+              ],
+              "location": "APIStepDefinitions.request_for_retrieval_of_details(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 203,
+            "name": "the status code is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 19
+                }
+              ],
+              "location": "APIStepDefinitions.verify_status_code(int)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 197,
+            "name": "@GetTimeDepositApplication"
+          },
+          {
+            "line": 197,
+            "name": "@Positive"
+          },
+          {
+            "line": 197,
+            "name": "@sprint6"
+          },
+          {
+            "line": 197,
+            "name": "@systemAPI"
+          },
+          {
+            "line": 197,
+            "name": "@L1"
+          }
+        ]
+      },
+      {
+        "line": 218,
+        "name": "This API method is used to create list of tax information of a customer into the core banking system",
+        "description": "",
+        "id": "sanity-tests-including-experience,-system-and-process-api;this-api-method-is-used-to-create-list-of-tax-information-of-a-customer-into-the-core-banking-system;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 619244,
+              "status": "passed"
+            },
+            "line": 210,
+            "name": "we have Endpoint https://192.168.35.70:8083/api/ab-s-customers-api/v1/customers/{customerId}/taxInfo",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://192.168.35.70:8083/api/ab-s-customers-api/v1/customers/{customerId}/taxInfo",
+                  "offset": 17
+                }
+              ],
+              "location": "APIStepDefinitions.we_have_endpoint(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5137940,
+              "status": "passed"
+            },
+            "line": 211,
+            "name": "all valid System headers",
+            "match": {
+              "arguments": [
+                {
+                  "val": "all",
+                  "offset": 0
+                },
+                {
+                  "val": "System",
+                  "offset": 10
+                }
+              ],
+              "location": "APIStepDefinitions.valid_headers(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1069327,
+              "status": "passed"
+            },
+            "line": 212,
+            "name": "a mandatory valid URI param customerId as 1003009",
+            "match": {
+              "arguments": [
+                {
+                  "val": "customerId",
+                  "offset": 28
+                },
+                {
+                  "val": "1003009",
+                  "offset": 42
+                }
+              ],
+              "location": "APIStepDefinitions.a_mandatory_valid_URI_param(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 692611,
+              "status": "passed"
+            },
+            "line": 213,
+            "name": "all valid fields in request body [  { \"nationalInsuranceNo\": \"QQ123806C\", \"countryISOCode\": 826 , \"taxReferenceNo\": \"11191314\"  }    ]",
+            "match": {
+              "arguments": [
+                {
+                  "val": "[  { \"nationalInsuranceNo\": \"QQ123806C\", \"countryISOCode\": 826 , \"taxReferenceNo\": \"11191314\"  }    ]",
+                  "offset": 33
+                }
+              ],
+              "location": "APIStepDefinitions.fields_in_request_body(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 21049584775,
+              "error_message": "java.net.ConnectException: Connection timed out: connect\r\n\tat java.net.DualStackPlainSocketImpl.connect0(Native Method)\r\n\tat java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)\r\n\tat java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)\r\n\tat java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)\r\n\tat java.net.AbstractPlainSocketImpl.connect(Unknown Source)\r\n\tat java.net.PlainSocketImpl.connect(Unknown Source)\r\n\tat java.net.SocksSocketImpl.connect(Unknown Source)\r\n\tat java.net.Socket.connect(Unknown Source)\r\n\tat sun.security.ssl.SSLSocketImpl.connect(Unknown Source)\r\n\tat org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:542)\r\n\tat org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:412)\r\n\tat org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:179)\r\n\tat org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:328)\r\n\tat org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:612)\r\n\tat org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:447)\r\n\tat org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:884)\r\n\tat org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)\r\n\tat org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)\r\n\tat org.apache.http.client.HttpClient$execute$0.call(Unknown Source)\r\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)\r\n\tat org.apache.http.client.HttpClient$execute$0.call(Unknown Source)\r\n\tat io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder.doRequest(RequestSpecificationImpl.groovy:2028)\r\n\tat io.restassured.internal.http.HTTPBuilder.post(HTTPBuilder.java:349)\r\n\tat io.restassured.internal.http.HTTPBuilder$post$2.call(Unknown Source)\r\n\tat io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1202)\r\n\tat sun.reflect.GeneratedMethodAccessor105.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1212)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1021)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:812)\r\n\tat io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:48)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:149)\r\n\tat io.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:30)\r\n\tat io.restassured.filter.Filter$filter$0.call(Unknown Source)\r\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)\r\n\tat io.restassured.filter.Filter$filter.call(Unknown Source)\r\n\tat io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)\r\n\tat io.restassured.filter.time.TimingFilter.filter(TimingFilter.java:56)\r\n\tat io.restassured.filter.Filter$filter.call(Unknown Source)\r\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)\r\n\tat io.restassured.filter.Filter$filter.call(Unknown Source)\r\n\tat io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)\r\n\tat io.restassured.filter.log.RequestLoggingFilter.filter(RequestLoggingFilter.java:124)\r\n\tat io.restassured.filter.Filter$filter.call(Unknown Source)\r\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)\r\n\tat io.restassured.filter.Filter$filter$0.call(Unknown Source)\r\n\tat io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)\r\n\tat io.restassured.filter.FilterContext$next.call(Unknown Source)\r\n\tat io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1631)\r\n\tat sun.reflect.GeneratedMethodAccessor96.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1212)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1021)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:812)\r\n\tat io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:48)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:58)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:182)\r\n\tat io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1637)\r\n\tat sun.reflect.GeneratedMethodAccessor95.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1212)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1021)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:812)\r\n\tat io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:48)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:58)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:182)\r\n\tat io.restassured.internal.RequestSpecificationImpl.post(RequestSpecificationImpl.groovy:170)\r\n\tat io.restassured.internal.RequestSpecificationImpl.post(RequestSpecificationImpl.groovy)\r\n\tat com.alica.test.stepdefs.APIStepDefinitions.request_for_creation_of_details(APIStepDefinitions.java:118)\r\n\tat ✽.When I request for creation of TaxInfoToFMS(Sanity.feature:214)\r\n",
+              "status": "failed"
+            },
+            "line": 214,
+            "name": "I request for creation of TaxInfoToFMS",
+            "match": {
+              "arguments": [
+                {
+                  "val": "TaxInfoToFMS",
+                  "offset": 26
+                }
+              ],
+              "location": "APIStepDefinitions.request_for_creation_of_details(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 215,
+            "name": "the status code is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 19
+                }
+              ],
+              "location": "APIStepDefinitions.verify_status_code(int)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 208,
+            "name": "@sprint8"
+          },
+          {
+            "line": 208,
+            "name": "@Positive"
+          },
+          {
+            "line": 208,
+            "name": "@systemAPI"
+          },
+          {
+            "line": 208,
+            "name": "@L1"
+          },
+          {
+            "line": 208,
+            "name": "@sanity"
+          },
+          {
+            "line": 208,
+            "name": "@SaveTaxInfoToFMS"
+          }
+        ]
+      },
+      {
+        "line": 230,
+        "name": "This API method is used to retrieve the nominated account details of a time deposit/savings application from the core banking system based on",
+        "description": "",
+        "id": "sanity-tests-including-experience,-system-and-process-api;this-api-method-is-used-to-retrieve-the-nominated-account-details-of-a-time-deposit/savings-application-from-the-core-banking-system-based-on;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 439819,
+              "status": "passed"
+            },
+            "line": 223,
+            "name": "we have Endpoint https://192.168.35.70:8083/api/ab-s-deposits-api/v1/deposits/applications/{applicationRefNo}/accounts/{accountId}",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://192.168.35.70:8083/api/ab-s-deposits-api/v1/deposits/applications/{applicationRefNo}/accounts/{accountId}",
+                  "offset": 17
+                }
+              ],
+              "location": "APIStepDefinitions.we_have_endpoint(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6293179,
+              "status": "passed"
+            },
+            "line": 224,
+            "name": "all valid System headers",
+            "match": {
+              "arguments": [
+                {
+                  "val": "all",
+                  "offset": 0
+                },
+                {
+                  "val": "System",
+                  "offset": 10
+                }
+              ],
+              "location": "APIStepDefinitions.valid_headers(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 14753522,
+              "status": "passed"
+            },
+            "line": 225,
+            "name": "mandatory valid URI params applicationRefNo as 00001793000003 and accountId as 97537626",
+            "match": {
+              "arguments": [
+                {
+                  "val": "applicationRefNo",
+                  "offset": 27
+                },
+                {
+                  "val": "00001793000003",
+                  "offset": 47
+                },
+                {
+                  "val": "accountId",
+                  "offset": 66
+                },
+                {
+                  "val": "97537626",
+                  "offset": 79
+                }
+              ],
+              "location": "APIStepDefinitions.mandatory_valid_URI_params(String,String,String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 21035320870,
+              "error_message": "java.net.ConnectException: Connection timed out: connect\r\n\tat java.net.DualStackPlainSocketImpl.connect0(Native Method)\r\n\tat java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)\r\n\tat java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)\r\n\tat java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)\r\n\tat java.net.AbstractPlainSocketImpl.connect(Unknown Source)\r\n\tat java.net.PlainSocketImpl.connect(Unknown Source)\r\n\tat java.net.SocksSocketImpl.connect(Unknown Source)\r\n\tat java.net.Socket.connect(Unknown Source)\r\n\tat sun.security.ssl.SSLSocketImpl.connect(Unknown Source)\r\n\tat org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:542)\r\n\tat org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:412)\r\n\tat org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:179)\r\n\tat org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:328)\r\n\tat org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:612)\r\n\tat org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:447)\r\n\tat org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:884)\r\n\tat org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)\r\n\tat org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)\r\n\tat org.apache.http.client.HttpClient$execute$0.call(Unknown Source)\r\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)\r\n\tat org.apache.http.client.HttpClient$execute$0.call(Unknown Source)\r\n\tat io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder.doRequest(RequestSpecificationImpl.groovy:2028)\r\n\tat io.restassured.internal.http.HTTPBuilder.doRequest(HTTPBuilder.java:494)\r\n\tat io.restassured.internal.http.HTTPBuilder.request(HTTPBuilder.java:451)\r\n\tat io.restassured.internal.http.HTTPBuilder$request$3.call(Unknown Source)\r\n\tat io.restassured.internal.RequestSpecificationImpl.sendHttpRequest(RequestSpecificationImpl.groovy:1434)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1212)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1021)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:812)\r\n\tat io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:48)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:58)\r\n\tat io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1221)\r\n\tat sun.reflect.GeneratedMethodAccessor105.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1212)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1021)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:812)\r\n\tat io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:48)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:149)\r\n\tat io.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:30)\r\n\tat io.restassured.filter.Filter$filter$0.call(Unknown Source)\r\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)\r\n\tat io.restassured.filter.Filter$filter.call(Unknown Source)\r\n\tat io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)\r\n\tat io.restassured.filter.time.TimingFilter.filter(TimingFilter.java:56)\r\n\tat io.restassured.filter.Filter$filter.call(Unknown Source)\r\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)\r\n\tat io.restassured.filter.Filter$filter.call(Unknown Source)\r\n\tat io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)\r\n\tat io.restassured.filter.log.RequestLoggingFilter.filter(RequestLoggingFilter.java:124)\r\n\tat io.restassured.filter.Filter$filter.call(Unknown Source)\r\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)\r\n\tat io.restassured.filter.Filter$filter$0.call(Unknown Source)\r\n\tat io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)\r\n\tat io.restassured.filter.FilterContext$next.call(Unknown Source)\r\n\tat io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1631)\r\n\tat sun.reflect.GeneratedMethodAccessor96.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1212)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1021)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:812)\r\n\tat io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:48)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:58)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:182)\r\n\tat io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1637)\r\n\tat sun.reflect.GeneratedMethodAccessor95.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1212)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1021)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:812)\r\n\tat io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:48)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:58)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:182)\r\n\tat io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy:166)\r\n\tat io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy)\r\n\tat com.alica.test.stepdefs.APIStepDefinitions.request_for_retrieval_of_details(APIStepDefinitions.java:104)\r\n\tat ✽.When I request for retrieval of TimeDepositAccountDetails(Sanity.feature:226)\r\n",
+              "status": "failed"
+            },
+            "line": 226,
+            "name": "I request for retrieval of TimeDepositAccountDetails",
+            "match": {
+              "arguments": [
+                {
+                  "val": "TimeDepositAccountDetails",
+                  "offset": 27
+                }
+              ],
+              "location": "APIStepDefinitions.request_for_retrieval_of_details(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 227,
+            "name": "the status code is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 19
+                }
+              ],
+              "location": "APIStepDefinitions.verify_status_code(int)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 221,
+            "name": "@sprint8"
+          },
+          {
+            "line": 221,
+            "name": "@Positive"
+          },
+          {
+            "line": 221,
+            "name": "@systemAPI"
+          },
+          {
+            "line": 221,
+            "name": "@L1"
+          },
+          {
+            "line": 221,
+            "name": "@GetTimeDepositAccountDetails"
+          }
+        ]
+      },
+      {
+        "line": 243,
+        "name": "This API is used to update the key managementdetails of a customer/company into the FMS System",
+        "description": "",
+        "id": "sanity-tests-including-experience,-system-and-process-api;this-api-is-used-to-update-the-key-managementdetails-of-a-customer/company-into-the-fms-system;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 316655,
+              "status": "passed"
+            },
+            "line": 235,
+            "name": "we have Endpoint https://192.168.35.70:8083/api/ab-s-customers-api/v1/customers/{customerID}/managers",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://192.168.35.70:8083/api/ab-s-customers-api/v1/customers/{customerID}/managers",
+                  "offset": 17
+                }
+              ],
+              "location": "APIStepDefinitions.we_have_endpoint(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2645758,
+              "status": "passed"
+            },
+            "line": 236,
+            "name": "all valid System headers",
+            "match": {
+              "arguments": [
+                {
+                  "val": "all",
+                  "offset": 0
+                },
+                {
+                  "val": "System",
+                  "offset": 10
+                }
+              ],
+              "location": "APIStepDefinitions.valid_headers(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 910430,
+              "status": "passed"
+            },
+            "line": 237,
+            "name": "a mandatory valid URI param customerID as 1003001",
+            "match": {
+              "arguments": [
+                {
+                  "val": "customerID",
+                  "offset": 28
+                },
+                {
+                  "val": "1003001",
+                  "offset": 42
+                }
+              ],
+              "location": "APIStepDefinitions.a_mandatory_valid_URI_param(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 665621,
+              "status": "passed"
+            },
+            "line": 238,
+            "name": "all valid fields in request body {    \"details\": [      {        \"seqNo\": 0,        \"title\": 0,        \"firstName\": \"updatefname\",        \"lastName\": \"updatelname\",        \"dateOfBirth\": \"2001-01-02\",        \"isLegalDirector\": 0,        \"jobTitle\": \"\",        \"currentShareholdingPercentage\": 0,        \"personalFundingAmount\": 0,        \"personalFundingLoanPercentage\": 0,        \"otherBusinessDevotionOver25\": 0,        \"otherBusinessDevotionDetails\": \"\",        \"offersPersonalGuarantee\": 0,        \"biography\": \"\",        \"managementTeamExpSummary\": \"\",        \"cvPath\": \"\",        \"roles\": [\"Director\",\"Shareholder\",\"UBO\",\"PSC\"]      }    ]  }",
+            "match": {
+              "arguments": [
+                {
+                  "val": "{    \"details\": [      {        \"seqNo\": 0,        \"title\": 0,        \"firstName\": \"updatefname\",        \"lastName\": \"updatelname\",        \"dateOfBirth\": \"2001-01-02\",        \"isLegalDirector\": 0,        \"jobTitle\": \"\",        \"currentShareholdingPercentage\": 0,        \"personalFundingAmount\": 0,        \"personalFundingLoanPercentage\": 0,        \"otherBusinessDevotionOver25\": 0,        \"otherBusinessDevotionDetails\": \"\",        \"offersPersonalGuarantee\": 0,        \"biography\": \"\",        \"managementTeamExpSummary\": \"\",        \"cvPath\": \"\",        \"roles\": [\"Director\",\"Shareholder\",\"UBO\",\"PSC\"]      }    ]  }",
+                  "offset": 33
+                }
+              ],
+              "location": "APIStepDefinitions.fields_in_request_body(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 21058110503,
+              "error_message": "java.net.ConnectException: Connection timed out: connect\r\n\tat java.net.DualStackPlainSocketImpl.connect0(Native Method)\r\n\tat java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)\r\n\tat java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)\r\n\tat java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)\r\n\tat java.net.AbstractPlainSocketImpl.connect(Unknown Source)\r\n\tat java.net.PlainSocketImpl.connect(Unknown Source)\r\n\tat java.net.SocksSocketImpl.connect(Unknown Source)\r\n\tat java.net.Socket.connect(Unknown Source)\r\n\tat sun.security.ssl.SSLSocketImpl.connect(Unknown Source)\r\n\tat org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:542)\r\n\tat org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:412)\r\n\tat org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:179)\r\n\tat org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:328)\r\n\tat org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:612)\r\n\tat org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:447)\r\n\tat org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:884)\r\n\tat org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)\r\n\tat org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)\r\n\tat org.apache.http.client.HttpClient$execute$0.call(Unknown Source)\r\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)\r\n\tat org.apache.http.client.HttpClient$execute$0.call(Unknown Source)\r\n\tat io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder.doRequest(RequestSpecificationImpl.groovy:2028)\r\n\tat io.restassured.internal.http.HTTPBuilder.doRequest(HTTPBuilder.java:494)\r\n\tat io.restassured.internal.http.HTTPBuilder.request(HTTPBuilder.java:451)\r\n\tat io.restassured.internal.http.HTTPBuilder$request$3.call(Unknown Source)\r\n\tat io.restassured.internal.RequestSpecificationImpl.sendHttpRequest(RequestSpecificationImpl.groovy:1434)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1212)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1021)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:812)\r\n\tat io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:48)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:58)\r\n\tat io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1221)\r\n\tat sun.reflect.GeneratedMethodAccessor105.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1212)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1021)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:812)\r\n\tat io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:48)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:149)\r\n\tat io.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:30)\r\n\tat io.restassured.filter.Filter$filter$0.call(Unknown Source)\r\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)\r\n\tat io.restassured.filter.Filter$filter.call(Unknown Source)\r\n\tat io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)\r\n\tat io.restassured.filter.time.TimingFilter.filter(TimingFilter.java:56)\r\n\tat io.restassured.filter.Filter$filter.call(Unknown Source)\r\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)\r\n\tat io.restassured.filter.Filter$filter.call(Unknown Source)\r\n\tat io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)\r\n\tat io.restassured.filter.log.RequestLoggingFilter.filter(RequestLoggingFilter.java:124)\r\n\tat io.restassured.filter.Filter$filter.call(Unknown Source)\r\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)\r\n\tat io.restassured.filter.Filter$filter$0.call(Unknown Source)\r\n\tat io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)\r\n\tat io.restassured.filter.FilterContext$next.call(Unknown Source)\r\n\tat io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1631)\r\n\tat sun.reflect.GeneratedMethodAccessor96.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1212)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1021)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:812)\r\n\tat io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:48)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:58)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:182)\r\n\tat io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1637)\r\n\tat sun.reflect.GeneratedMethodAccessor95.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1212)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1021)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:812)\r\n\tat io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:48)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:58)\r\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:154)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:182)\r\n\tat io.restassured.internal.RequestSpecificationImpl.put(RequestSpecificationImpl.groovy:174)\r\n\tat io.restassured.internal.RequestSpecificationImpl.put(RequestSpecificationImpl.groovy)\r\n\tat com.alica.test.stepdefs.APIStepDefinitions.request_for_updation_of_details(APIStepDefinitions.java:111)\r\n\tat ✽.When I request for updation of KeyManagementDetails(Sanity.feature:239)\r\n",
+              "status": "failed"
+            },
+            "line": 239,
+            "name": "I request for updation of KeyManagementDetails",
+            "match": {
+              "arguments": [
+                {
+                  "val": "KeyManagementDetails",
+                  "offset": 26
+                }
+              ],
+              "location": "APIStepDefinitions.request_for_updation_of_details(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 240,
+            "name": "the status code is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 19
+                }
+              ],
+              "location": "APIStepDefinitions.verify_status_code(int)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 233,
+            "name": "@Positive"
+          },
+          {
+            "line": 233,
+            "name": "@sprint9"
+          },
+          {
+            "line": 233,
+            "name": "@systemAPI"
+          },
+          {
+            "line": 233,
+            "name": "@L1"
+          },
+          {
+            "line": 233,
+            "name": "@UpdateKeyManagementDetails"
+          }
+        ]
+      },
+      {
+        "line": 256,
+        "name": "This API is used to update the key managementdetails of a customer/company into the FMS System",
+        "description": "",
+        "id": "sanity-tests-including-experience,-system-and-process-api;this-api-is-used-to-update-the-key-managementdetails-of-a-customer/company-into-the-fms-system;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 2539319,
+              "status": "passed"
+            },
+            "line": 248,
+            "name": "we have Endpoint https://\u003csys_ip_port\u003e/api/ab-p-customers-api/v1/deposits/companies/customers",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://\u003csys_ip_port\u003e/api/ab-p-customers-api/v1/deposits/companies/customers",
+                  "offset": 17
+                }
+              ],
+              "location": "APIStepDefinitions.we_have_endpoint(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3012591,
+              "status": "passed"
+            },
+            "line": 249,
+            "name": "all valid Process headers",
+            "match": {
+              "arguments": [
+                {
+                  "val": "all",
+                  "offset": 0
+                },
+                {
+                  "val": "Process",
+                  "offset": 10
+                }
+              ],
+              "location": "APIStepDefinitions.valid_headers(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 662200,
+              "status": "passed"
+            },
+            "line": 250,
+            "name": "a mandatory valid URI param customerID as 1003001",
+            "match": {
+              "arguments": [
+                {
+                  "val": "customerID",
+                  "offset": 28
+                },
+                {
+                  "val": "1003001",
+                  "offset": 42
+                }
+              ],
+              "location": "APIStepDefinitions.a_mandatory_valid_URI_param(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 408648,
+              "status": "passed"
+            },
+            "line": 251,
+            "name": "all valid fields in request body {    \"details\": [      {        \"seqNo\": 0,        \"title\": 0,        \"firstName\": \"updatefname\",        \"lastName\": \"updatelname\",        \"dateOfBirth\": \"2001-01-02\",        \"isLegalDirector\": 0,        \"jobTitle\": \"\",        \"currentShareholdingPercentage\": 0,        \"personalFundingAmount\": 0,        \"personalFundingLoanPercentage\": 0,        \"otherBusinessDevotionOver25\": 0,        \"otherBusinessDevotionDetails\": \"\",        \"offersPersonalGuarantee\": 0,        \"biography\": \"\",        \"managementTeamExpSummary\": \"\",        \"cvPath\": \"\",        \"roles\": [\"Director\",\"Shareholder\",\"UBO\",\"PSC\"]      }    ]  }",
+            "match": {
+              "arguments": [
+                {
+                  "val": "{    \"details\": [      {        \"seqNo\": 0,        \"title\": 0,        \"firstName\": \"updatefname\",        \"lastName\": \"updatelname\",        \"dateOfBirth\": \"2001-01-02\",        \"isLegalDirector\": 0,        \"jobTitle\": \"\",        \"currentShareholdingPercentage\": 0,        \"personalFundingAmount\": 0,        \"personalFundingLoanPercentage\": 0,        \"otherBusinessDevotionOver25\": 0,        \"otherBusinessDevotionDetails\": \"\",        \"offersPersonalGuarantee\": 0,        \"biography\": \"\",        \"managementTeamExpSummary\": \"\",        \"cvPath\": \"\",        \"roles\": [\"Director\",\"Shareholder\",\"UBO\",\"PSC\"]      }    ]  }",
+                  "offset": 33
+                }
+              ],
+              "location": "APIStepDefinitions.fields_in_request_body(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2078973,
+              "error_message": "java.net.MalformedURLException: For input string: \"8083\"\"\r\n\tat java.net.URL.\u003cinit\u003e(Unknown Source)\r\n\tat java.net.URL.\u003cinit\u003e(Unknown Source)\r\n\tat java.net.URL.\u003cinit\u003e(Unknown Source)\r\n\tat sun.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat java.lang.reflect.Constructor.newInstance(Unknown Source)\r\n\tat org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:83)\r\n\tat org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:247)\r\n\tat io.restassured.internal.RequestSpecificationImpl.getTargetURI(RequestSpecificationImpl.groovy:1526)\r\n\tat sun.reflect.GeneratedMethodAccessor25.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1212)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1021)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:812)\r\n\tat io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:48)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:58)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)\r\n\tat io.restassured.internal.RequestSpecificationImpl.partiallyApplyPathParams(RequestSpecificationImpl.groovy:1659)\r\n\tat sun.reflect.GeneratedMethodAccessor29.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1212)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1021)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:812)\r\n\tat io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:48)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:58)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:182)\r\n\tat io.restassured.internal.RequestSpecificationImpl.newFilterContext(RequestSpecificationImpl.groovy:1084)\r\n\tat sun.reflect.GeneratedMethodAccessor41.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1212)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1021)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:812)\r\n\tat io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:48)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:58)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:182)\r\n\tat io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1629)\r\n\tat sun.reflect.GeneratedMethodAccessor96.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1212)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1021)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:812)\r\n\tat io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:48)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:58)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:182)\r\n\tat io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1637)\r\n\tat sun.reflect.GeneratedMethodAccessor95.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1212)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1021)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:812)\r\n\tat io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:48)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:58)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:182)\r\n\tat io.restassured.internal.RequestSpecificationImpl.put(RequestSpecificationImpl.groovy:174)\r\n\tat io.restassured.internal.RequestSpecificationImpl.put(RequestSpecificationImpl.groovy)\r\n\tat com.alica.test.stepdefs.APIStepDefinitions.request_for_updation_of_details(APIStepDefinitions.java:111)\r\n\tat ✽.When I request for updation of KeyManagementDetails(Sanity.feature:252)\r\nCaused by: java.lang.NumberFormatException: For input string: \"8083\"\"\r\n\tat java.lang.NumberFormatException.forInputString(Unknown Source)\r\n\tat java.lang.Integer.parseInt(Unknown Source)\r\n\tat java.lang.Integer.parseInt(Unknown Source)\r\n\tat java.net.URLStreamHandler.parseURL(Unknown Source)\r\n\tat java.net.URL.\u003cinit\u003e(Unknown Source)\r\n\tat java.net.URL.\u003cinit\u003e(Unknown Source)\r\n\tat java.net.URL.\u003cinit\u003e(Unknown Source)\r\n\tat sun.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat java.lang.reflect.Constructor.newInstance(Unknown Source)\r\n\tat org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:83)\r\n\tat org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:247)\r\n\tat io.restassured.internal.RequestSpecificationImpl.getTargetURI(RequestSpecificationImpl.groovy:1526)\r\n\tat sun.reflect.GeneratedMethodAccessor25.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1212)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1021)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:812)\r\n\tat io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:48)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:58)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)\r\n\tat io.restassured.internal.RequestSpecificationImpl.partiallyApplyPathParams(RequestSpecificationImpl.groovy:1659)\r\n\tat sun.reflect.GeneratedMethodAccessor29.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1212)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1021)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:812)\r\n\tat io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:48)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:58)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:182)\r\n\tat io.restassured.internal.RequestSpecificationImpl.newFilterContext(RequestSpecificationImpl.groovy:1084)\r\n\tat sun.reflect.GeneratedMethodAccessor41.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1212)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1021)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:812)\r\n\tat io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:48)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:58)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:182)\r\n\tat io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1629)\r\n\tat sun.reflect.GeneratedMethodAccessor96.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1212)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1021)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:812)\r\n\tat io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:48)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:58)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:182)\r\n\tat io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1637)\r\n\tat sun.reflect.GeneratedMethodAccessor95.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1212)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1021)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:812)\r\n\tat io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:48)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:58)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:182)\r\n\tat io.restassured.internal.RequestSpecificationImpl.put(RequestSpecificationImpl.groovy:174)\r\n\tat io.restassured.internal.RequestSpecificationImpl.put(RequestSpecificationImpl.groovy)\r\n\tat com.alica.test.stepdefs.APIStepDefinitions.request_for_updation_of_details(APIStepDefinitions.java:111)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat cucumber.runtime.Utils$1.call(Utils.java:37)\r\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:13)\r\n\tat cucumber.runtime.Utils.invoke(Utils.java:31)\r\n\tat cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:38)\r\n\tat cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)\r\n\tat cucumber.runtime.Runtime.runStep(Runtime.java:299)\r\n\tat cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)\r\n\tat cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)\r\n\tat cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)\r\n\tat cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:91)\r\n\tat org.junit.runners.Suite.runChild(Suite.java:127)\r\n\tat org.junit.runners.Suite.runChild(Suite.java:26)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:309)\r\n\tat cucumber.runtime.junit.ExamplesRunner.run(ExamplesRunner.java:59)\r\n\tat org.junit.runners.Suite.runChild(Suite.java:127)\r\n\tat org.junit.runners.Suite.runChild(Suite.java:26)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:309)\r\n\tat cucumber.runtime.junit.ScenarioOutlineRunner.run(ScenarioOutlineRunner.java:53)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:309)\r\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:93)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:37)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:309)\r\n\tat cucumber.api.junit.Cucumber.run(Cucumber.java:98)\r\n\tat org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)\r\n\tat org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209)\r\n",
+              "status": "failed"
+            },
+            "line": 252,
+            "name": "I request for updation of KeyManagementDetails",
+            "match": {
+              "arguments": [
+                {
+                  "val": "KeyManagementDetails",
+                  "offset": 26
+                }
+              ],
+              "location": "APIStepDefinitions.request_for_updation_of_details(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 253,
+            "name": "the status code is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 19
+                }
+              ],
+              "location": "APIStepDefinitions.verify_status_code(int)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 246,
+            "name": "@Positive"
+          },
+          {
+            "line": 246,
+            "name": "@sprint9"
+          },
+          {
+            "line": 246,
+            "name": "@ProcessAPI"
+          },
+          {
+            "line": 246,
+            "name": "@L1"
+          },
+          {
+            "line": 246,
+            "name": "@UpdateKeyManagementDetails"
+          }
+        ]
+      }
+    ],
+    "name": "Sanity Tests including Experience, System and Process API",
+    "description": "",
+    "id": "sanity-tests-including-experience,-system-and-process-api",
+    "keyword": "Feature",
+    "uri": "Sanity.feature"
+  }
+]
